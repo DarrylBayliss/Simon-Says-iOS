@@ -91,5 +91,5 @@ iOSInjectionProject/
 
 # LLMs
 # LLMs take up alot of space. It's best to ignore them and have the developer pull the LLM into the project locally
-
-Simon-Says/gemma-model/.*
+# LLMs are usually a .bin file
+*.bin
