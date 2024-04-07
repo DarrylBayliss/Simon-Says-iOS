@@ -88,3 +88,8 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+# LLMs
+# LLMs take up alot of space. It's best to ignore them and have the developer pull the LLM into the project locally
+
+Simon-Says/gemma-model/.*

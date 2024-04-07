@@ -1,21 +1,25 @@
 PODS:
+  - Factory (2.3.2)
   - MediaPipeTasksGenAI (0.10.12):
     - MediaPipeTasksGenAIC (= 0.10.12)
   - MediaPipeTasksGenAIC (0.10.12)
 
 DEPENDENCIES:
+  - Factory
   - MediaPipeTasksGenAI
   - MediaPipeTasksGenAIC
 
 SPEC REPOS:
   trunk:
+    - Factory
     - MediaPipeTasksGenAI
     - MediaPipeTasksGenAIC
 
 SPEC CHECKSUMS:
+  Factory: 3a9d0809910130d609b34d4554828e6ecce519ff
   MediaPipeTasksGenAI: efd6d1177fcb6455a5460466c99229da4afe35bb
   MediaPipeTasksGenAIC: ed29bc83f4f39276505abfe956f4ff25f9c6a93a
 
-PODFILE CHECKSUM: b7066b160bd5979347f2a0d85a2877950ea46cc4
+PODFILE CHECKSUM: 7cc038e3029a0dda3a4d92ca8b4de0fc47e86ce0
 
 COCOAPODS: 1.15.2

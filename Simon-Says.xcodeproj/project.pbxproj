@@ -14,6 +14,14 @@
 		6911F0CC2BB1F11C00C0C0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6911F0CB2BB1F11C00C0C0B0 /* Assets.xcassets */; };
 		6911F0CF2BB1F11C00C0C0B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6911F0CE2BB1F11C00C0C0B0 /* Preview Assets.xcassets */; };
 		693A75142BB367D100908F97 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 693A75132BB367D100908F97 /* Podfile */; };
+		6984FCE02BC19EED00D2CC64 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCDF2BC19EED00D2CC64 /* PlayViewModel.swift */; };
+		6984FCE22BC1A1B300D2CC64 /* MediaPipeLLMDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCE12BC1A1B300D2CC64 /* MediaPipeLLMDataSource.swift */; };
+		6984FCE42BC1B24200D2CC64 /* MediaPipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCE32BC1B24200D2CC64 /* MediaPipeRepository.swift */; };
+		6984FCE62BC1B36E00D2CC64 /* StartSimonSays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCE52BC1B36E00D2CC64 /* StartSimonSays.swift */; };
+		6984FCE82BC1B44100D2CC64 /* SendMessageToSimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCE72BC1B44100D2CC64 /* SendMessageToSimon.swift */; };
+		6984FCEB2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCEA2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift */; };
+		6984FCF22BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin in Resources */ = {isa = PBXBuildFile; fileRef = 6984FCF12BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin */; };
+		69C3CFC72BBB5E560040EBB3 /* ChatMessageModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C3CFC62BBB5E560040EBB3 /* ChatMessageModifiers.swift */; };
 		E3320FC1E79B2DE0F5A24230 /* Pods_Simon_Says.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6144448C50D568E9A1F097DB /* Pods_Simon_Says.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +36,15 @@
 		6911F0C92BB1F11B00C0C0B0 /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
 		6911F0CB2BB1F11C00C0C0B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6911F0CE2BB1F11C00C0C0B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		693A75132BB367D100908F97 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		693A75132BB367D100908F97 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6984FCDF2BC19EED00D2CC64 /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
+		6984FCE12BC1A1B300D2CC64 /* MediaPipeLLMDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPipeLLMDataSource.swift; sourceTree = "<group>"; };
+		6984FCE32BC1B24200D2CC64 /* MediaPipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPipeRepository.swift; sourceTree = "<group>"; };
+		6984FCE52BC1B36E00D2CC64 /* StartSimonSays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSimonSays.swift; sourceTree = "<group>"; };
+		6984FCE72BC1B44100D2CC64 /* SendMessageToSimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageToSimon.swift; sourceTree = "<group>"; };
+		6984FCEA2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionContainer.swift; sourceTree = "<group>"; };
+		6984FCF12BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "gemma-2b-it-cpu-int8.bin"; sourceTree = "<group>"; };
+		69C3CFC62BBB5E560040EBB3 /* ChatMessageModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +65,35 @@
 				6144448C50D568E9A1F097DB /* Pods_Simon_Says.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6910F4D32BB37C350042162B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				692E536C2BC19BFD00EE2E9E /* Instructions */,
+				692E536B2BC19BF300EE2E9E /* Introduction */,
+				692E536A2BC19BEB00EE2E9E /* Play */,
+				69C3CFC62BBB5E560040EBB3 /* ChatMessageModifiers.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6910F4D42BB37C490042162B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6984FCE12BC1A1B300D2CC64 /* MediaPipeLLMDataSource.swift */,
+				6984FCE32BC1B24200D2CC64 /* MediaPipeRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6910F4D52BB37C500042162B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6984FCE52BC1B36E00D2CC64 /* StartSimonSays.swift */,
+				6984FCE72BC1B44100D2CC64 /* SendMessageToSimon.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		6911F0BB2BB1F11B00C0C0B0 = {
@@ -74,11 +119,13 @@
 			isa = PBXGroup;
 			children = (
 				6911F0C72BB1F11B00C0C0B0 /* Simon_SaysApp.swift */,
-				6911F0C92BB1F11B00C0C0B0 /* IntroductionView.swift */,
+				6984FCE92BC1BC8000D2CC64 /* DI */,
+				6910F4D42BB37C490042162B /* Data */,
+				6910F4D52BB37C500042162B /* Domain */,
+				6910F4D32BB37C350042162B /* Presentation */,
+				6984FCEC2BC1C62300D2CC64 /* gemma-model */,
 				6911F0CB2BB1F11C00C0C0B0 /* Assets.xcassets */,
 				6911F0CD2BB1F11C00C0C0B0 /* Preview Content */,
-				6910F4CC2BB36A980042162B /* InstructionsView.swift */,
-				6910F4CE2BB36C590042162B /* PlayView.swift */,
 			);
 			path = "Simon-Says";
 			sourceTree = "<group>";
@@ -89,6 +136,47 @@
 				6911F0CE2BB1F11C00C0C0B0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		692E536A2BC19BEB00EE2E9E /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				6910F4CE2BB36C590042162B /* PlayView.swift */,
+				6984FCDF2BC19EED00D2CC64 /* PlayViewModel.swift */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		692E536B2BC19BF300EE2E9E /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				6911F0C92BB1F11B00C0C0B0 /* IntroductionView.swift */,
+			);
+			path = Introduction;
+			sourceTree = "<group>";
+		};
+		692E536C2BC19BFD00EE2E9E /* Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				6910F4CC2BB36A980042162B /* InstructionsView.swift */,
+			);
+			path = Instructions;
+			sourceTree = "<group>";
+		};
+		6984FCE92BC1BC8000D2CC64 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				6984FCEA2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		6984FCEC2BC1C62300D2CC64 /* gemma-model */ = {
+			isa = PBXGroup;
+			children = (
+				6984FCF12BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin */,
+			);
+			path = "gemma-model";
 			sourceTree = "<group>";
 		};
 		D948FA6DDA8B5A28AB29F248 /* Pods */ = {
@@ -111,6 +199,7 @@
 				6911F0C02BB1F11B00C0C0B0 /* Sources */,
 				6911F0C12BB1F11B00C0C0B0 /* Frameworks */,
 				6911F0C22BB1F11B00C0C0B0 /* Resources */,
+				3C6ADB4750696FB4EA11A84D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +250,7 @@
 			files = (
 				693A75142BB367D100908F97 /* Podfile in Resources */,
 				6911F0CF2BB1F11C00C0C0B0 /* Preview Assets.xcassets in Resources */,
+				6984FCF22BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin in Resources */,
 				6911F0CC2BB1F11C00C0C0B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +258,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3C6ADB4750696FB4EA11A84D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A4C5F6DA20FB98D9BDE01D23 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,10 +304,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6984FCE02BC19EED00D2CC64 /* PlayViewModel.swift in Sources */,
 				6911F0CA2BB1F11B00C0C0B0 /* IntroductionView.swift in Sources */,
 				6910F4CD2BB36A980042162B /* InstructionsView.swift in Sources */,
+				69C3CFC72BBB5E560040EBB3 /* ChatMessageModifiers.swift in Sources */,
+				6984FCE62BC1B36E00D2CC64 /* StartSimonSays.swift in Sources */,
 				6910F4CF2BB36C590042162B /* PlayView.swift in Sources */,
 				6911F0C82BB1F11B00C0C0B0 /* Simon_SaysApp.swift in Sources */,
+				6984FCE82BC1B44100D2CC64 /* SendMessageToSimon.swift in Sources */,
+				6984FCE42BC1B24200D2CC64 /* MediaPipeRepository.swift in Sources */,
+				6984FCE22BC1A1B300D2CC64 /* MediaPipeLLMDataSource.swift in Sources */,
+				6984FCEB2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +450,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simon-Says/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -365,6 +480,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simon-Says/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
