@@ -78,4 +78,18 @@ class MediaPipeLLMDataSource {
         
         return message
     }
+    
+//    func checkImage(image: MPImage): ImageClassificationState {
+//        val classificationResult = mediapipeLLMDataSource.classifyImage(image = image)
+//
+//        val category = classificationResult.classifications().first().categories().firstOrNull()
+//
+//        return if (category == null) {
+//            ImageClassificationState.NotRecognised("I don't recognise that. 🤔 Let's try another task.")
+//        } else if (category.score() >= 75.0f) {
+//            ImageClassificationState.Recognised("That's a ${category.categoryName()} all right!")
+//        } else {
+//            ImageClassificationState.NotRecognised("That doesn't look right to me. Let's try another task.")
+//        }
+//    }
 }

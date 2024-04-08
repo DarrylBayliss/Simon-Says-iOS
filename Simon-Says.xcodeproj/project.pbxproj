@@ -21,14 +21,14 @@
 		6984FCE82BC1B44100D2CC64 /* SendMessageToSimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCE72BC1B44100D2CC64 /* SendMessageToSimon.swift */; };
 		6984FCEB2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCEA2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift */; };
 		6984FCF22BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin in Resources */ = {isa = PBXBuildFile; fileRef = 6984FCF12BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin */; };
+		6984FCF52BC3415B00D2CC64 /* efficientnet_lite2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 6984FCF42BC3415B00D2CC64 /* efficientnet_lite2.tflite */; };
 		69C3CFC72BBB5E560040EBB3 /* ChatMessageModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C3CFC62BBB5E560040EBB3 /* ChatMessageModifiers.swift */; };
-		E3320FC1E79B2DE0F5A24230 /* Pods_Simon_Says.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6144448C50D568E9A1F097DB /* Pods_Simon_Says.framework */; };
+		FA52336A26F19960E9817AA4 /* Pods_Simon_Says.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A0C6246F49DFF6959AD76A /* Pods_Simon_Says.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		041F5E042E57B06D07430CFC /* Pods-Simon-Says.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simon-Says.release.xcconfig"; path = "Target Support Files/Pods-Simon-Says/Pods-Simon-Says.release.xcconfig"; sourceTree = "<group>"; };
 		130BCEC97558D2D8181ABA2A /* Pods-Simon-Says.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simon-Says.debug.xcconfig"; path = "Target Support Files/Pods-Simon-Says/Pods-Simon-Says.debug.xcconfig"; sourceTree = "<group>"; };
-		6144448C50D568E9A1F097DB /* Pods_Simon_Says.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simon_Says.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6910F4CC2BB36A980042162B /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		6910F4CE2BB36C590042162B /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		6911F0C42BB1F11B00C0C0B0 /* Simon-Says.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simon-Says.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +44,9 @@
 		6984FCE72BC1B44100D2CC64 /* SendMessageToSimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageToSimon.swift; sourceTree = "<group>"; };
 		6984FCEA2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionContainer.swift; sourceTree = "<group>"; };
 		6984FCF12BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "gemma-2b-it-cpu-int8.bin"; sourceTree = "<group>"; };
+		6984FCF42BC3415B00D2CC64 /* efficientnet_lite2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientnet_lite2.tflite; sourceTree = "<group>"; };
 		69C3CFC62BBB5E560040EBB3 /* ChatMessageModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModifiers.swift; sourceTree = "<group>"; };
+		A4A0C6246F49DFF6959AD76A /* Pods_Simon_Says.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simon_Says.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3320FC1E79B2DE0F5A24230 /* Pods_Simon_Says.framework in Frameworks */,
+				FA52336A26F19960E9817AA4 /* Pods_Simon_Says.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +64,7 @@
 		355AD754916BC39B304F0029 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6144448C50D568E9A1F097DB /* Pods_Simon_Says.framework */,
+				A4A0C6246F49DFF6959AD76A /* Pods_Simon_Says.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +126,7 @@
 				6910F4D52BB37C500042162B /* Domain */,
 				6910F4D32BB37C350042162B /* Presentation */,
 				6984FCEC2BC1C62300D2CC64 /* gemma-model */,
+				6984FCF32BC3413700D2CC64 /* efficient-net */,
 				6911F0CB2BB1F11C00C0C0B0 /* Assets.xcassets */,
 				6911F0CD2BB1F11C00C0C0B0 /* Preview Content */,
 			);
@@ -179,6 +182,14 @@
 			path = "gemma-model";
 			sourceTree = "<group>";
 		};
+		6984FCF32BC3413700D2CC64 /* efficient-net */ = {
+			isa = PBXGroup;
+			children = (
+				6984FCF42BC3415B00D2CC64 /* efficientnet_lite2.tflite */,
+			);
+			path = "efficient-net";
+			sourceTree = "<group>";
+		};
 		D948FA6DDA8B5A28AB29F248 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +210,7 @@
 				6911F0C02BB1F11B00C0C0B0 /* Sources */,
 				6911F0C12BB1F11B00C0C0B0 /* Frameworks */,
 				6911F0C22BB1F11B00C0C0B0 /* Resources */,
-				3C6ADB4750696FB4EA11A84D /* [CP] Embed Pods Frameworks */,
+				C2DD3CC62D9385D4F1C7C708 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				693A75142BB367D100908F97 /* Podfile in Resources */,
+				6984FCF52BC3415B00D2CC64 /* efficientnet_lite2.tflite in Resources */,
 				6911F0CF2BB1F11C00C0C0B0 /* Preview Assets.xcassets in Resources */,
 				6984FCF22BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin in Resources */,
 				6911F0CC2BB1F11C00C0C0B0 /* Assets.xcassets in Resources */,
@@ -258,23 +270,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3C6ADB4750696FB4EA11A84D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A4C5F6DA20FB98D9BDE01D23 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +290,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2DD3CC62D9385D4F1C7C708 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Simon-Says/Pods-Simon-Says-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -449,9 +461,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simon-Says/Preview Content\"";
+				DEVELOPMENT_TEAM = GN6WN37S9Y;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,6 +477,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "darrylbayliss.Simon-Says";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -479,9 +495,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simon-Says/Preview Content\"";
+				DEVELOPMENT_TEAM = GN6WN37S9Y;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -492,6 +511,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "darrylbayliss.Simon-Says";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
