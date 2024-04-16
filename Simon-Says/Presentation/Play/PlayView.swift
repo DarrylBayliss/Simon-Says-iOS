@@ -13,28 +13,34 @@ struct PlayView: View {
     @State private var viewModel = Container.shared.playViewModel.callAsFunction()
     
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(viewModel.messages) { message in
-                    if (message.isFromUser) {
-                        Text(message.text)
-                            .sentMessageStyle()
+        ScrollViewReader { scrollProxy in
+            ScrollView {
+                VStack {
+                    ForEach(viewModel.messages) { message in
+                        if (message.isFromUser) {
+                            Text(message.text)
+                                .sentMessageStyle()
+                                .id(message.id)
                             
-                    } else {
-                        Text(message.text)
-                            .recievedMessageStyle()
+                        } else {
+                            Text(message.text)
+                                .recievedMessageStyle()
+                                .id(message.id)
+                        }
                     }
-                }
+                }.onChange(of: viewModel.messages, initial: false, {
+                    scrollProxy.scrollTo(viewModel.messages.last?.id)
+                })
             }
-        }
-        .safeAreaInset(edge: .bottom) {
-            ChatBox(onSendMessage: { message in
-                Task { await viewModel.sendMessage(userMessage: message) }
-            }, onTakePicture: {
-                
-            })
-        }.task {
-            await viewModel.startGame()
+            .safeAreaInset(edge: .bottom) {
+                ChatBox(onSendMessage: { message in
+                    Task { await viewModel.sendMessage(userMessage: message) }
+                }, onTakePicture: {
+                    
+                })
+            }.task {
+                await viewModel.startGame()
+            }
         }
     }
 }

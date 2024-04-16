@@ -40,7 +40,8 @@ class PlayViewModel {
     }
 }
 
-struct Message : Identifiable {
+struct Message : Identifiable, Hashable {
+    
     let id: UUID = UUID()
     private var _text: String = ""
     var text: String {
@@ -58,6 +59,10 @@ struct Message : Identifiable {
         self._text = text
         self.image = image
         self.isFromUser = isFromUser
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
 
