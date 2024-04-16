@@ -31,6 +31,8 @@ struct PlayView: View {
                 }.onChange(of: viewModel.messages, initial: false, {
                     scrollProxy.scrollTo(viewModel.messages.last?.id)
                 })
+                .padding(.trailing, 10)
+                .padding(.leading, 10)
             }
             .safeAreaInset(edge: .bottom) {
                 ChatBox(onSendMessage: { message in
