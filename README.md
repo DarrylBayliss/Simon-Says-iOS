@@ -1,5 +1,6 @@
 # Simon-Says-iOS
-An iOS App recreating the Simon Says game. Uses MediaPipe to run an LLM on device.
+
+An iOS App recreating the Simon Says game. Uses MediaPipe to run an LLM on device. 📣 🦾
 
 # Installation
 
@@ -15,3 +16,6 @@ An iOS App recreating the Simon Says game. Uses MediaPipe to run an LLM on devic
 
 - Run the app.
 
+# Other Links
+
+Enjoyed this app? Check out the [Android](https://github.com/DarrylBayliss/Simon-Says-Android) version. 🤖
