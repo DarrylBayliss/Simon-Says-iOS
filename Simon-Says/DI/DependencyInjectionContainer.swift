@@ -8,6 +8,7 @@
 import Foundation
 import Factory
 import MediaPipeTasksGenAI
+import os
 
 extension Container {
     var playViewModel: Factory<PlayViewModel> {
@@ -32,5 +33,9 @@ extension Container {
     
     var llmInference: Factory<LlmInference> {
         self { LlmInference(modelPath: Bundle.main.path(forResource: "gemma-2b-it-cpu-int8", ofType: "bin")!) }
+    }
+    
+    var logger: Factory<Logger> {
+        self { Logger() }
     }
 }

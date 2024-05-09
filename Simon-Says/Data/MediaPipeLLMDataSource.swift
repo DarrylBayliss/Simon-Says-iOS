@@ -10,64 +10,58 @@ import MediaPipeTasksGenAI
 import Factory
 
 private let SimonSaysPrompt = """
-    You are a Simon in a game of Simon Says. Your objective is to ask the player to perform tasks.
-    
+    You are Simon in a game of Simon Says.
+        
     For every task you give, you must prefix it with the words "Simon says".
-    
+        
     You must not ask the player to do anything that is dangerous, unethical or unlawful.
-    
-    Do not try to communicate with the player. Only ask the player to perform tasks.
 """
 
-private let MovePrompt = SimonSaysPrompt + """
-   Give the player a task related to moving to a different position.
+private let DoTenPushUpsPrompt = SimonSaysPrompt + """
+
+   Ask the player to do ten pushups.
 """
 
-private let TouchBodyPartPrompt = SimonSaysPrompt + """
-    Give the player a task related to touching a body part.
+private let TouchHeadPrompt = SimonSaysPrompt + """
+
+    Ask the player to touch their head.
 """
 
 private let SingASongPrompt = SimonSaysPrompt + """
-    Ask the player to sing a song of their choice.
+
+    Ask the player to sing their favourite song.
 """
 
-private let TakePhotoPrompt = SimonSaysPrompt + """
-    Give the player a task to take a photo of an object.
+private let TakePhotoOfOrangePrompt = SimonSaysPrompt + """
+
+    Ask the player to take a photo of an orange.
 """
 
 private let MakeANoisePrompt = SimonSaysPrompt + """
-    Give the player a task to make a loud noise.
+
+    Ask the player to make a loud noise.
 """
 
 
 class MediaPipeLLMDataSource {
     
     private let prompts = [
-            MovePrompt,
-            TouchBodyPartPrompt,
+            DoTenPushUpsPrompt,
+            TouchHeadPrompt,
             SingASongPrompt,
-            TakePhotoPrompt,
+            TakePhotoOfOrangePrompt,
             MakeANoisePrompt
         ]
     
     let llmInference = Container.shared.llmInference.callAsFunction()
     
-    func start() async -> String {
-        var message: String = ""
-        do {
-            message = try llmInference.generateResponse(inputText: SimonSaysPrompt)
-        } catch {
-            if (error is GenAiInferenceError) {
-                message = error.localizedDescription
-            }
-        }
-        
-        return message
-    }
+    let logger = Container.shared.logger.callAsFunction()
     
-    func sendMessage() async -> String  {
+    func start() async -> String {
         let prompt = prompts.randomElement()!
+        logger.debug("Starting Simon says with the following prompt: \(prompt)")
         var message: String = ""
+        
         do {
             message = try llmInference.generateResponse(inputText: prompt)
         } catch {
@@ -76,20 +70,24 @@ class MediaPipeLLMDataSource {
             }
         }
         
+        logger.debug("Recieved simon says task from starting method: \(message)")
         return message
     }
     
-//    func checkImage(image: MPImage): ImageClassificationState {
-//        val classificationResult = mediapipeLLMDataSource.classifyImage(image = image)
-//
-//        val category = classificationResult.classifications().first().categories().firstOrNull()
-//
-//        return if (category == null) {
-//            ImageClassificationState.NotRecognised("I don't recognise that. 🤔 Let's try another task.")
-//        } else if (category.score() >= 75.0f) {
-//            ImageClassificationState.Recognised("That's a ${category.categoryName()} all right!")
-//        } else {
-//            ImageClassificationState.NotRecognised("That doesn't look right to me. Let's try another task.")
-//        }
-//    }
+    func sendMessage() async -> String  {
+        let prompt = prompts.randomElement()!
+        logger.debug("Passing LLM the following prompt: \(prompt)")
+        var message: String = ""
+    
+        do {
+            message = try llmInference.generateResponse(inputText: prompt)
+        } catch {
+            if (error is GenAiInferenceError) {
+                message = error.localizedDescription
+            }
+        }
+        
+        logger.debug("Recieved simon says task from starting method: \(message)")
+        return message
+    }
 }

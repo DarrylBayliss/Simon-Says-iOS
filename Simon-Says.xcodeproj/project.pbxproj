@@ -20,9 +20,8 @@
 		6984FCE62BC1B36E00D2CC64 /* StartSimonSays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCE52BC1B36E00D2CC64 /* StartSimonSays.swift */; };
 		6984FCE82BC1B44100D2CC64 /* SendMessageToSimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCE72BC1B44100D2CC64 /* SendMessageToSimon.swift */; };
 		6984FCEB2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984FCEA2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift */; };
-		6984FCF22BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin in Resources */ = {isa = PBXBuildFile; fileRef = 6984FCF12BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin */; };
-		6984FCF52BC3415B00D2CC64 /* efficientnet_lite2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 6984FCF42BC3415B00D2CC64 /* efficientnet_lite2.tflite */; };
 		69C3CFC72BBB5E560040EBB3 /* ChatMessageModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C3CFC62BBB5E560040EBB3 /* ChatMessageModifiers.swift */; };
+		69C476C02BDFFFF700883B16 /* gemma-2b-it-cpu-int8.bin in Resources */ = {isa = PBXBuildFile; fileRef = 69C476BF2BDFFFF700883B16 /* gemma-2b-it-cpu-int8.bin */; };
 		FA52336A26F19960E9817AA4 /* Pods_Simon_Says.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A0C6246F49DFF6959AD76A /* Pods_Simon_Says.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +42,8 @@
 		6984FCE52BC1B36E00D2CC64 /* StartSimonSays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSimonSays.swift; sourceTree = "<group>"; };
 		6984FCE72BC1B44100D2CC64 /* SendMessageToSimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageToSimon.swift; sourceTree = "<group>"; };
 		6984FCEA2BC1BC9200D2CC64 /* DependencyInjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionContainer.swift; sourceTree = "<group>"; };
-		6984FCF12BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "gemma-2b-it-cpu-int8.bin"; sourceTree = "<group>"; };
-		6984FCF42BC3415B00D2CC64 /* efficientnet_lite2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientnet_lite2.tflite; sourceTree = "<group>"; };
 		69C3CFC62BBB5E560040EBB3 /* ChatMessageModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModifiers.swift; sourceTree = "<group>"; };
+		69C476BF2BDFFFF700883B16 /* gemma-2b-it-cpu-int8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "gemma-2b-it-cpu-int8.bin"; sourceTree = "<group>"; };
 		A4A0C6246F49DFF6959AD76A /* Pods_Simon_Says.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simon_Says.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,7 +124,6 @@
 				6910F4D52BB37C500042162B /* Domain */,
 				6910F4D32BB37C350042162B /* Presentation */,
 				6984FCEC2BC1C62300D2CC64 /* gemma-model */,
-				6984FCF32BC3413700D2CC64 /* efficient-net */,
 				6911F0CB2BB1F11C00C0C0B0 /* Assets.xcassets */,
 				6911F0CD2BB1F11C00C0C0B0 /* Preview Content */,
 			);
@@ -177,17 +174,9 @@
 		6984FCEC2BC1C62300D2CC64 /* gemma-model */ = {
 			isa = PBXGroup;
 			children = (
-				6984FCF12BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin */,
+				69C476BF2BDFFFF700883B16 /* gemma-2b-it-cpu-int8.bin */,
 			);
 			path = "gemma-model";
-			sourceTree = "<group>";
-		};
-		6984FCF32BC3413700D2CC64 /* efficient-net */ = {
-			isa = PBXGroup;
-			children = (
-				6984FCF42BC3415B00D2CC64 /* efficientnet_lite2.tflite */,
-			);
-			path = "efficient-net";
 			sourceTree = "<group>";
 		};
 		D948FA6DDA8B5A28AB29F248 /* Pods */ = {
@@ -260,9 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				693A75142BB367D100908F97 /* Podfile in Resources */,
-				6984FCF52BC3415B00D2CC64 /* efficientnet_lite2.tflite in Resources */,
 				6911F0CF2BB1F11C00C0C0B0 /* Preview Assets.xcassets in Resources */,
-				6984FCF22BC1C6C700D2CC64 /* gemma-2b-it-cpu-int8.bin in Resources */,
+				69C476C02BDFFFF700883B16 /* gemma-2b-it-cpu-int8.bin in Resources */,
 				6911F0CC2BB1F11C00C0C0B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

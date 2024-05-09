@@ -37,8 +37,6 @@ struct PlayView: View {
             .safeAreaInset(edge: .bottom) {
                 ChatBox(onSendMessage: { message in
                     Task { await viewModel.sendMessage(userMessage: message) }
-                }, onTakePicture: {
-                    
                 })
             }.task {
                 await viewModel.startGame()
@@ -55,8 +53,6 @@ struct ChatBox: View {
     
     var onSendMessage: (String) -> Void
     
-    var onTakePicture: () -> Void
-    
     var body: some View {
         HStack {
             TextField("", text: $message)
@@ -67,18 +63,12 @@ struct ChatBox: View {
             Button("", systemImage: "paperplane", action: {
                 onSendMessage(message)
             })
-            
-            Button("", systemImage: "camera", action:  {
-                onTakePicture()
-            })
         }
     }
 }
 
 #Preview {
     return ChatBox(onSendMessage: { message in
-        
-    }, onTakePicture: {
         
     })
 }
